@@ -1,0 +1,390 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('extendo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Added to stack header and buttons vertically */
+    height: 100vh;
+    position: relative; /* Added for positioning */
+}
+
+.header-container {
+    position: absolute;
+    top: 11%; /* Adjust this value as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-container img {
+    width: 600px; /* Adjust the width as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.button-container, .tug-container, .pizza-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Changed to absolute for flexible positioning */
+    transform: translate(-50%, -50%); /* Centering the button */
+}
+
+.button-container {
+    top: 29%; /* Adjust these values as needed */
+    left: 30%; /* Adjust these values as needed */
+}
+
+.button-container a {
+    display: inline-block;
+    background: url('reg.png') no-repeat center center;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    text-indent: -9999px; /* Hides the link text */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.button-container a:hover {
+    background: url('buttonlogo.png') no-repeat center center;
+    background-size: contain;
+}
+
+.tug-container {
+    top: 29%; /* Same as button-container */
+    left: 50%; /* Slightly to the right of button-container */
+}
+
+.tug-container a {
+    display: inline-block;
+    background: url('tug.png') no-repeat center center;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    text-indent: -9999px; /* Hides the link text */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.tug-container a:hover {
+    background: url('opentug.png') no-repeat center center;
+    background-size: contain;
+}
+
+.pizza-container {
+    top: 29%; /* Same as button-container */
+    left: 70%; /* Slightly to the right of tug-container */
+}
+
+.pizza-container a {
+    display: inline-block;
+    background: url('pizza.png') no-repeat center center;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    text-indent: -9999px; /* Hides the link text */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.pizza-container a:hover {
+    background: url('opensolo.png') no-repeat center center;
+    background-size: contain;
+}
+
+.icon-container {
+    position: absolute;
+    width: 100px; /* Default size for icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Positioning for individual icons */
+.twitter-icon {
+    top: -50%; /* Adjust as needed */
+    left: -10%; /* Adjust as needed */
+}
+
+.telegram-icon {
+    top: -45%; /* Adjust as needed */
+    left: -20%; /* Adjust as needed */
+}
+
+.pump-icon {
+    top: -29%; /* Adjust as needed */
+    left: -20%; /* Adjust as needed */
+}
+
+.icon-container img {
+    width: 200%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.disclaimer-container {
+    position: absolute;
+    bottom: -5px; /* Adjust this value to move up/down */
+    left: -150px; /* Adjust this value to move left/right */
+}
+
+.disclaimer-container img {
+    width: 800px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .header-container img {
+        width: 200%; /* Scale down header image for mobile */
+        max-width: 400px; /* Ensure it doesn't get too large */
+        left: 60%;
+        transform: translateX(-20%);
+    }
+
+    .button-container {
+        top: 30%; /* Adjust these values as needed for mobile */
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    .tug-container {
+        top: 30%; /* Adjust these values as needed for mobile */
+        left: 48%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pizza-container {
+        top: 30%; /* Adjust these values as needed for mobile */
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    .button-container a, .tug-container a, .pizza-container a {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px; /* Increase spacing for mobile */
+    }
+
+    .icon-container {
+        width: 50px;
+    }
+
+    .icon-container img {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .disclaimer-container img {
+        width: 200px; /* Scale down disclaimer image for mobile */
+    }
+
+    .icon-container {
+        position: absolute;
+        width: 100px; /* Default size for icons */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    /* Positioning for individual icons */
+    .twitter-icon {
+        top: -70%; /* Adjust as needed */
+        left: -50%; /* Adjust as needed */
+    }
+    
+    .telegram-icon {
+        top: -70%; /* Adjust as needed */
+        left: -45%; /* Adjust as needed */
+    }
+    
+    .pump-icon {
+        top: -70%; /* Adjust as needed */
+        left: -30%; /* Adjust as needed */
+    }
+    
+    .icon-container img {
+        width: 200%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .disclaimer-container {
+        position: absolute;
+        bottom: -5px; /* Adjust this value to move up/down */
+        left: -185px; /* Adjust this value to move left/right */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container img {
+        width: 200%; /* Scale down header image for mobile */
+        max-width: 400px; /* Ensure it doesn't get too large */
+        left: 60%;
+        transform: translateX(-20%);
+    }
+
+    .button-container {
+        top: 30%; /* Adjust these values as needed for mobile */
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    .tug-container {
+        top: 30%; /* Adjust these values as needed for mobile */
+        left: 48%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pizza-container {
+        top: 30%; /* Adjust these values as needed for mobile */
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    .button-container a, .tug-container a, .pizza-container a {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px; /* Increase spacing for mobile */
+    }
+
+    .icon-container {
+        width: 50px;
+    }
+
+    .icon-container img {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .disclaimer-container img {
+        width: 200px; /* Scale down disclaimer image for mobile */
+    }
+
+    .icon-container {
+        position: absolute;
+        width: 100px; /* Default size for icons */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    /* Positioning for individual icons */
+    .twitter-icon {
+        top: -70%; /* Adjust as needed */
+        left: -50%; /* Adjust as needed */
+    }
+    
+    .telegram-icon {
+        top: -70%; /* Adjust as needed */
+        left: -45%; /* Adjust as needed */
+    }
+    
+    .pump-icon {
+        top: -70%; /* Adjust as needed */
+        left: -30%; /* Adjust as needed */
+    }
+    
+    .icon-container img {
+        width: 200%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .disclaimer-container {
+        position: absolute;
+        bottom: -5px; /* Adjust this value to move up/down */
+        left: -185px; /* Adjust this value to move left/right */
+    }
+
+    /* Disable scrolling */
+html {
+    overflow: hidden;
+    touch-action: none;
+}
+
+@media (max-width: 450px) {
+    .header-container img {
+        width: 200%; /* Scale down header image for mobile */
+        max-width: 400px; /* Ensure it doesn't get too large */
+        left: 60%;
+        transform: translateX(-20%);
+    }
+
+    .button-container {
+        top: 30%; /* Adjust these values as needed for mobile */
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    .tug-container {
+        top: 30%; /* Adjust these values as needed for mobile */
+        left: 48%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pizza-container {
+        top: 30%; /* Adjust these values as needed for mobile */
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    .button-container a, .tug-container a, .pizza-container a {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px; /* Increase spacing for mobile */
+    }
+
+
+
+    .icon-container img {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .disclaimer-container img {
+        width: 200px; /* Scale down disclaimer image for mobile */
+    }
+
+    .icon-container {
+        position: absolute;
+        width: 80%; /* Default size for icons */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    /* Positioning for individual icons */
+    .twitter-icon {
+        top: -70%; /* Adjust as needed */
+        left: -50%; /* Adjust as needed */
+    }
+    
+    .telegram-icon {
+        top: -70%; /* Adjust as needed */
+        left: -45%; /* Adjust as needed */
+    }
+    
+    .pump-icon {
+        top: -70%; /* Adjust as needed */
+        left: -30%; /* Adjust as needed */
+    }
+    
+    .icon-container img {
+        width: 200%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .disclaimer-container {
+        position: absolute;
+        bottom: -5px; /* Adjust this value to move up/down */
+        left: -185px; /* Adjust this value to move left/right */
+    }
+}
+
+/* Disable zooming */
+html, body {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -ms-content-zooming: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+}
